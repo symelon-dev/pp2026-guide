@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>段階1：講義用の Google アカウントを作る</title>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+
+<div class="stage-nav"><span>段階 1 / 4</span><span><a href="index.html">トップに戻る</a></span></div>
+
+<h1>段階1：講義用の Google アカウントを作る</h1>
+
+<p>この講義専用の Google アカウントを新しく作ります。普段使っているアカウント（私用・大学）とは
+別にします。この講義専用のアカウントで、Claude や Perplexity、GitHub など、今後使うサービスに
+登録していきます。</p>
+
+<div class="warn">
+Vivaldi（または Opera）を開いて作業してください。普段使っているブラウザは使いません。
+</div>
+
+<h2>1. アカウント名を決める</h2>
+
+<p>次の規則で、自分だけの Gmail アドレスを決めます。</p>
+
+<p><strong>イニシャル + 好きな果物（ローマ字）+ 姓の文字数 + 名の文字数</strong></p>
+
+<div class="step">
+<div class="step-title">例：清野 悠太（seino yuta）、好きな果物がメロンの場合</div>
+<ul>
+  <li>イニシャル：<code>sy</code>（seino, yuta の頭文字）</li>
+  <li>果物：<code>melon</code></li>
+  <li>姓の文字数：<code>5</code>（seino は5文字）</li>
+  <li>名の文字数：<code>4</code>（yuta は4文字）</li>
+  <li>→ <code>symelon54@gmail.com</code></li>
+</ul>
+</div>
+
+<p>文字数は、自分の名前のローマ字表記（学生証にある表記。なければヘボン式）で数えてください。
+果物に迷ったら <code>ringo</code>（りんご）にしてください。</p>
+
+<div class="warn">
+このアドレスがすでに使われていたら、果物の部分だけ別の果物に変えてください（例：<code>symelon54</code>
+→ <code>syringo54</code>）。
+</div>
+
+<h2>2. Google アカウントを作る</h2>
+
+<ol>
+  <li>Vivaldi で <a href="https://accounts.google.com/signup" target="_blank" rel="noopener">
+    accounts.google.com/signup</a> を開く。</li>
+  <li>姓・名は自分の本名で入力する（ユーザー名だけ上で決めた形にする）。</li>
+  <li>「ユーザー名」の欄に、上で決めたアドレスの <code>@gmail.com</code> より前の部分を入力する。</li>
+  <li>パスワードを決める（他のサービスで使っていないものにする）。</li>
+  <li>電話番号の確認を求められた場合は、自分のスマートフォンで対応する。</li>
+  <li>「作成した通知」や「個人情報の確認」などの画面は、内容を確認して進めてよい。</li>
+</ol>
+
+<div class="warn">
+スマートフォンを持っていない人、電話番号の確認がどうしても通らない人は、進めずに教員を呼んでください。
+</div>
+
+<h2>3. できたことを確かめる</h2>
+
+<p>Vivaldi で <a href="https://myaccount.google.com/" target="_blank" rel="noopener">
+myaccount.google.com</a> を開き、画面右上に、今作ったアカウントのメールアドレスが
+表示されていれば成功です。</p>
+
+<div class="gate">
+<p>グループ全員がここまで終わったら、代表の1人が教員に報告し、合言葉を受け取ってください。</p>
+<form id="gate-form">
+  <label for="gate-input">合言葉：</label>
+  <input type="text" id="gate-input" autocomplete="off">
+  <button type="submit">次の段階へ</button>
+</form>
+<p id="gate-message"></p>
+</div>
+
+<script src="gate.js"></script>
+<script>
+  setupGate("1cbe93b936a4bd4d40c2224462023917cd77c962376feb9128d9e569c9856aaf", "stage2.html");
+</script>
+
+</body>
+</html>
