@@ -19,9 +19,10 @@ function setupGate(expectedHashHex, nextUrl) {
       .join("");
 
     if (hex === expectedHashHex) {
-      message.textContent = "正解です。次のページに移動します。";
+      message.textContent = "正解です。次の段階に進みます。";
       message.className = "ok";
-      setTimeout(() => { window.location.href = nextUrl; }, 500);
+      if (typeof celebrate === "function") celebrate();
+      setTimeout(() => { window.location.href = nextUrl; }, 1600);
     } else {
       message.textContent = "合言葉が違います。教員に確認してください。";
       message.className = "ng";

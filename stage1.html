@@ -6,7 +6,7 @@
 <title>段階1：ブラウザを用意し、講義用の Google アカウントを作る</title>
 <link rel="stylesheet" href="common.css">
 </head>
-<body>
+<body data-stage="1">
 
 <div class="stage-nav"><span>段階 1 / 6</span><span><a href="index.html">トップに戻る</a></span></div>
 
@@ -76,9 +76,12 @@
 
 <h2>3. できたことを確かめる</h2>
 
-<p>Vivaldi で <a href="https://myaccount.google.com/" target="_blank" rel="noopener">
-myaccount.google.com</a> を開き、画面右上に、今作ったアカウントのメールアドレスが
-表示されていれば成功です。</p>
+<p>終わったものにチェックを入れましょう。</p>
+
+<ul class="check" data-key="stage1">
+  <li>Vivaldi（または Opera）で、この手順書を開いている</li>
+  <li><a href="https://myaccount.google.com/" target="_blank" rel="noopener">myaccount.google.com</a> の右上に、今作ったアカウントのメールアドレスが表示される</li>
+</ul>
 
 <div class="gate">
 <p>グループ全員がここまで終わったら、代表の1人が教員に報告し、合言葉を受け取ってください。</p>
@@ -90,6 +93,7 @@ myaccount.google.com</a> を開き、画面右上に、今作ったアカウン�
 <p id="gate-message"></p>
 </div>
 
+<script src="ui.js"></script>
 <script src="gate.js"></script>
 <script>
   setupGate("1cbe93b936a4bd4d40c2224462023917cd77c962376feb9128d9e569c9856aaf", "stage2.html");

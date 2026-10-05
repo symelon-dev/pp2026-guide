@@ -6,7 +6,7 @@
 <title>段階2：GitHub アカウントを作る</title>
 <link rel="stylesheet" href="common.css">
 </head>
-<body>
+<body data-stage="2">
 
 <div class="stage-nav"><span>段階 2 / 6</span><span><a href="index.html">トップに戻る</a></span></div>
 
@@ -38,8 +38,12 @@ GitHub のユーザー名に、本名や学籍番号を含めないでくださ�
 
 <h2>3. できたことを確かめる</h2>
 
-<p>Vivaldi で <a href="https://github.com/settings/profile" target="_blank" rel="noopener">
-github.com/settings/profile</a> を開き、自分で決めたユーザー名が表示されていれば成功です。</p>
+<p>終わったものにチェックを入れましょう。</p>
+
+<ul class="check" data-key="stage2">
+  <li><a href="https://github.com/settings/profile" target="_blank" rel="noopener">github.com/settings/profile</a> に、自分で決めたユーザー名が表示される</li>
+  <li>GitHub からの確認メールが届いていたら、確認を済ませた</li>
+</ul>
 
 <h2>早く終わった人へ（任意）</h2>
 
@@ -63,6 +67,7 @@ github.com/settings/profile</a> を開き、自分で決めたユーザー名が
 <p id="gate-message"></p>
 </div>
 
+<script src="ui.js"></script>
 <script src="gate.js"></script>
 <script>
   setupGate("34dce910f3e3b7ebda52fc0927dda5ee92779adc82a4b960746c5782efcbd09a", "stage3.html");

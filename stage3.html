@@ -6,7 +6,7 @@
 <title>段階3：生成AIのアカウントを作り、拡張機能を入れる</title>
 <link rel="stylesheet" href="common.css">
 </head>
-<body>
+<body data-stage="3">
 
 <div class="stage-nav"><span>段階 3 / 6</span><span><a href="index.html">トップに戻る</a></span></div>
 
@@ -120,7 +120,9 @@ ChatGPT・Gemini・Claude のどれでも使えます。</p>
 
 <h2>できたことを確かめる</h2>
 
-<ul>
+<p>終わったものにチェックを入れましょう。</p>
+
+<ul class="check" data-key="stage3">
   <li>ChatGPT と Gemini（18 歳以上の人は Claude も）に、講義用のアカウントでログインできている。</li>
   <li>Enter で改行でき、<kbd>Ctrl</kbd>+<kbd>Enter</kbd>（<kbd>Cmd</kbd>+<kbd>Enter</kbd>）で送信できる。</li>
   <li>架空の個人情報を送ろうとしたときに、まもるくんが何をしたか（または何もしなかったか）を説明できる。</li>
@@ -136,6 +138,7 @@ ChatGPT・Gemini・Claude のどれでも使えます。</p>
 <p id="gate-message"></p>
 </div>
 
+<script src="ui.js"></script>
 <script src="gate.js"></script>
 <script>
   setupGate("9867c7ad9ee78d76cb92e0b306791e0008ccc359e6673bd499d3bcb379985e53", "stage4.html");

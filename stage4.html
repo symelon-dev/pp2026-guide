@@ -6,7 +6,7 @@
 <title>段階4：アバターを作り、Gravatar と GitHub に登録する</title>
 <link rel="stylesheet" href="common.css">
 </head>
-<body>
+<body data-stage="4">
 
 <div class="stage-nav"><span>段階 4 / 6</span><span><a href="index.html">トップに戻る</a></span></div>
 
@@ -93,7 +93,9 @@ Gravatar のプロフィールは、<strong>初めから誰でも見られる状
 
 <h2>できたことを確かめる</h2>
 
-<ul>
+<p>終わったものにチェックを入れましょう。</p>
+
+<ul class="check" data-key="stage4">
   <li><code>github.com/&lt;自分のユーザー名&gt;</code> を開くと、自分のアバターが表示される。</li>
   <li>Gravatar の自分のプロフィールに、同じアバターが表示される。</li>
 </ul>
@@ -108,6 +110,7 @@ Gravatar のプロフィールは、<strong>初めから誰でも見られる状
 <p id="gate-message"></p>
 </div>
 
+<script src="ui.js"></script>
 <script src="gate.js"></script>
 <script>
   setupGate("9326e08974a3da35d705cd624a421e8617dd37ef219dcfba94f693aade1da12b", "stage5.html");

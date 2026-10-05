@@ -6,7 +6,7 @@
 <title>段階5：自分のリポジトリを作り、Codespaces を開く</title>
 <link rel="stylesheet" href="common.css">
 </head>
-<body>
+<body data-stage="5">
 
 <div class="stage-nav"><span>段階 5 / 6</span><span><a href="index.html">トップに戻る</a></span></div>
 
@@ -60,8 +60,13 @@
 
 <h2>できたことを確かめる</h2>
 
-<p>画面の左側にファイルの一覧（<code>README.md</code>、<code>checkpoints</code> など）が
-見えていれば成功です。</p>
+<p>終わったものにチェックを入れましょう。</p>
+
+<ul class="check" data-key="stage5">
+  <li>自分の <code>pp2026</code> が <strong>Private</strong> で作られている</li>
+  <li>教員（<code>symelon-dev</code>）を Collaborator に招待した</li>
+  <li>Codespaces の画面の左側に、ファイルの一覧（<code>README.md</code>、<code>checkpoints</code> など）が見えている</li>
+</ul>
 
 <div class="gate">
 <p>グループ全員がここまで終わったら、代表の1人が教員に報告し、合言葉を受け取ってください。</p>
@@ -73,6 +78,7 @@
 <p id="gate-message"></p>
 </div>
 
+<script src="ui.js"></script>
 <script src="gate.js"></script>
 <script>
   setupGate("868310e193d1af0b9a0a16b18d5826a5490fe3f9410defa30dc115829fc1db4a", "stage6.html");
