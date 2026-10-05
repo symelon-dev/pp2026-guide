@@ -3,65 +3,128 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>段階3：自分のリポジトリを作る</title>
+<title>段階3：生成AIのアカウントを作り、拡張機能を入れる</title>
 <link rel="stylesheet" href="common.css">
 </head>
 <body>
 
-<div class="stage-nav"><span>段階 3 / 4</span><span><a href="index.html">トップに戻る</a></span></div>
+<div class="stage-nav"><span>段階 3 / 6</span><span><a href="index.html">トップに戻る</a></span></div>
 
-<h1>段階3：自分のリポジトリを作り、Codespaces を開く</h1>
+<h1>段階3：生成AIのアカウントを作り、拡張機能を入れる</h1>
 
-<p>ここから、学期を通して使う自分のリポジトリを作ります。回ごとの課題は、このリポジトリの中に
-増えていきます。</p>
-
-<h2>1. テンプレートからリポジトリを作る</h2>
-
-<ol>
-  <li>Vivaldi で <a href="https://github.com/symelon-dev/pp2026-template" target="_blank" rel="noopener">
-    github.com/symelon-dev/pp2026-template</a> を開く。</li>
-  <li>画面上部の緑のボタン <strong>Use this template</strong> を押し、
-    <strong>Create a new repository</strong> を選ぶ。</li>
-  <li><strong>Owner</strong> が自分のアカウントになっていることを確かめる。</li>
-  <li><strong>Repository name</strong> に <code>pp2026</code> と入力する。</li>
-  <li>公開範囲を <strong>Private</strong> にする（Public のままにしない）。</li>
-  <li><strong>Create repository from template</strong> を押す。</li>
-</ol>
+<p>この講義で使う生成AI（ChatGPT・Gemini・Claude）に登録し、使いやすくするための拡張機能と、
+個人情報をうっかり送らないための拡張機能を入れます。最後に、実際に使ってみます。</p>
 
 <div class="warn">
-リポジトリ名は必ず <code>pp2026</code> にしてください（半角小文字）。公開範囲は必ず
-<strong>Private</strong> にしてください。
+どのサービスも、段階1で作った<strong>講義用の Google アカウント</strong>で登録してください。
+アカウントを選ぶ画面が出たら、アドレスをよく見て選んでください。
 </div>
 
-<h2>2. 教員を招待する</h2>
+<h2>1. ChatGPT に登録する</h2>
 
 <ol>
-  <li>作られた自分のリポジトリ（<code>&lt;自分のユーザー名&gt;/pp2026</code>）を開く。</li>
-  <li><strong>Settings</strong> タブを押す。</li>
-  <li>左側の一覧から <strong>Collaborators</strong> を押す。</li>
-  <li><strong>Add people</strong> を押す。</li>
-  <li>検索欄に <code>symelon-dev</code> と入力し、表示された名前を選ぶ。</li>
-  <li><strong>Add symelon-dev to this repository</strong> を押す。</li>
+  <li>Vivaldi で <a href="https://chatgpt.com/" target="_blank" rel="noopener">chatgpt.com</a> を開く。</li>
+  <li><strong>無料でサインアップ</strong>（Sign up）を押し、<strong>Google で続ける</strong> を選ぶ。</li>
+  <li>講義用の Google アカウントを選び、画面の指示に従って進める。</li>
+  <li>有料プランの案内が出ても、申し込まずに閉じる。</li>
 </ol>
 
-<h2>3. Codespaces を開く</h2>
+<h2>2. Gemini を開く</h2>
+
+<p>Gemini は Google のサービスなので、新しい登録は要りません。</p>
 
 <ol>
-  <li>リポジトリのトップページで、緑の <strong>Code</strong> ボタンを押す。</li>
-  <li><strong>Codespaces</strong> のタブを選ぶ。</li>
-  <li><strong>Create codespace on main</strong> を押す。</li>
-  <li>1〜3分ほど待つ。画面が切り替わり、VS Code のような画面が開く。</li>
+  <li>Vivaldi で <a href="https://gemini.google.com/" target="_blank" rel="noopener">gemini.google.com</a> を開く。</li>
+  <li>右上が講義用の Google アカウントになっていることを確かめる。なっていなければ
+    <strong>ログイン</strong> を押して、講義用のアカウントを選ぶ。</li>
+  <li>利用規約などの画面が出たら、内容を確認して進める。</li>
+</ol>
+
+<h2>3. Claude に登録する</h2>
+
+<ol>
+  <li>Vivaldi で <a href="https://claude.ai/" target="_blank" rel="noopener">claude.ai</a> を開く。</li>
+  <li><strong>Google で続ける</strong>（Continue with Google）を選び、講義用の Google アカウントを選ぶ。</li>
+  <li>電話番号の確認を求められるので、自分のスマートフォンの番号を入れ、SMS で届いた番号を入力する。</li>
+  <li>名前を聞かれたら、本名ではなく GitHub のユーザー名（例：<code>symelon54</code>）を入れる。</li>
 </ol>
 
 <div class="warn">
-初回は環境の準備に数分かかります。読み込み中の画面のまま待ってください。
-うまく開かないときは <a href="troubleshooting.html">困ったときは</a> を見てください。
+Claude は <strong>18 歳以上</strong>でないと使えません。18 歳未満の人は Claude の登録をとばし、
+ChatGPT と Gemini だけで進めてください。電話番号の確認がどうしても通らない人も、
+Claude はとばしてかまいません（あとで教員に伝えてください）。
+</div>
+
+<h2>4. 拡張機能「Chat AI Ctrl+Enter Sender」を入れる</h2>
+
+<p>生成AIの入力欄では、ふつう Enter キーを押すとすぐに送信されてしまい、改行して長い文章を
+書くのが大変です。この拡張機能を入れると、<strong>Enter で改行</strong>、
+<kbd>Ctrl</kbd>+<kbd>Enter</kbd>（Mac は <kbd>Cmd</kbd>+<kbd>Enter</kbd>）で送信になります。
+ChatGPT・Gemini・Claude のどれでも使えます。</p>
+
+<ol>
+  <li>Vivaldi で
+    <a href="https://chromewebstore.google.com/detail/chat-ai-ctrl+enter-sender/gbncgdhklmnckojlibfhdadpfbcdbnch" target="_blank" rel="noopener">Chrome ウェブストアの Chat AI Ctrl+Enter Sender のページ</a>
+    を開く。提供元が <strong>Masachika Kamada</strong> になっていることを確かめる。</li>
+  <li><strong>Chrome に追加</strong> を押し、確認の画面で <strong>拡張機能を追加</strong> を押す。</li>
+</ol>
+
+<div class="step">
+<div class="step-title">Opera の人</div>
+<p>Opera は、Chrome ウェブストアの拡張機能をそのままでは入れられません。ウェブストアのページの
+上に Opera の案内（拡張機能のインストールを許可するボタン）が出たら、それを押してから
+<strong>Opera に追加</strong> を押してください。案内が出ないときは、Opera のアドオンサイト
+（addons.opera.com）で「Install Chrome Extensions」を検索して入れてから、もう一度ウェブストアの
+ページを開いてください。</p>
+</div>
+
+<h2>5. 拡張機能「まもるくん」を入れる</h2>
+
+<p>生成AIに送った文章は、サービスの会社のサーバーに送られます。名前や電話番号などの個人情報を、
+うっかり送ってしまわないようにするための拡張機能です。送信の前に入力欄の文章を調べ、
+個人情報らしきものを見つけると、確認の画面を出したり、伏せ字に置き換えたりします。
+調べる処理はすべて自分のパソコンの中で行われ、外には送られないと説明されています。</p>
+
+<ol>
+  <li>Vivaldi で
+    <a href="https://chromewebstore.google.com/detail/%E3%81%BE%E3%82%82%E3%82%8B%E3%81%8F%E3%82%93-%E2%80%94-ai%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%82%AC%E3%83%BC%E3%83%89/pfhaefhabcmapdbloogaffddjfahaono" target="_blank" rel="noopener">Chrome ウェブストアのまもるくんのページ</a>
+    を開く。名前が「まもるくん — AIチャット個人情報ガード」になっていることを確かめる。</li>
+  <li>4 と同じように <strong>Chrome に追加</strong>（Opera は <strong>Opera に追加</strong>）を押す。</li>
+</ol>
+
+<div class="warn">
+まもるくんが調べるのは <strong>ChatGPT と Gemini（と Microsoft Copilot）だけ</strong>です。
+<strong>Claude では働きません。</strong>また、送信を必ず止めてくれるわけではなく、
+注意をうながす道具です。見落としもありえます。最後に送るかどうかを決めるのは自分です。
+</div>
+
+<h2>6. 使ってみる</h2>
+
+<p>ChatGPT か Gemini を開き、まず普通に質問してみましょう。改行は Enter、送信は
+<kbd>Ctrl</kbd>+<kbd>Enter</kbd>（Mac は <kbd>Cmd</kbd>+<kbd>Enter</kbd>）です。</p>
+
+<p>次に、まもるくんが働くかを確かめます。入力欄に、次の<strong>架空の</strong>個人情報を含む文章を
+貼り付けて、送信してみてください。</p>
+
+<pre><code>次の人に送るお礼のメールを書いてください。
+宛先：山田 太郎さん（電話 090-1234-5678、メール yamada.taro@example.com）</code></pre>
+
+<p>確認の画面が出たり、名前や電話番号が伏せ字に置き換わったりすれば、まもるくんが働いています。
+何も起きずに送信された場合は、そのことを覚えておいてください（「見落としもありうる」ことの実例です）。</p>
+
+<div class="warn">
+<strong>自分や友人の本物の個人情報は、絶対に入力しないでください。</strong>
+試すときは、上のような架空の情報だけを使います。<code>example.com</code> は、例として使うために
+用意されている、実在しないアドレスです。
 </div>
 
 <h2>できたことを確かめる</h2>
 
-<p>画面の左側にファイルの一覧（<code>README.md</code>、<code>checkpoints</code> など）が
-見えていれば成功です。</p>
+<ul>
+  <li>ChatGPT と Gemini（18 歳以上の人は Claude も）に、講義用のアカウントでログインできている。</li>
+  <li>Enter で改行でき、<kbd>Ctrl</kbd>+<kbd>Enter</kbd>（<kbd>Cmd</kbd>+<kbd>Enter</kbd>）で送信できる。</li>
+  <li>架空の個人情報を送ろうとしたときに、まもるくんが何をしたか（または何もしなかったか）を説明できる。</li>
+</ul>
 
 <div class="gate">
 <p>グループ全員がここまで終わったら、代表の1人が教員に報告し、合言葉を受け取ってください。</p>

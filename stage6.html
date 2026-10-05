@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>段階6：プログラムを直して提出する</title>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+
+<div class="stage-nav"><span>段階 6 / 6</span><span><a href="index.html">トップに戻る</a></span></div>
+
+<h1>段階6：プログラムを直して提出する</h1>
+
+<p>これが今日の最後の段階です。プログラムを実行し、わざと混ぜてある不具合を見つけて直し、
+提出するところまで進めます。</p>
+
+<h2>1. 最初のプログラムを実行する</h2>
+
+<ol>
+  <li>Codespaces の下側にある <strong>Terminal</strong>（黒い画面）をクリックする。
+    見当たらない場合は、上のメニューの <strong>Terminal → New Terminal</strong> を押す。</li>
+  <li>次を入力して Enter を押す。
+    <pre><code>python checkpoints/01/hello.py</code></pre>
+  </li>
+  <li><code>Hello, pp2026!</code> と表示されれば成功です。</li>
+</ol>
+
+<h2>2. 不具合を見つける</h2>
+
+<p>次に、閏年（うるう年）かどうかを判定するプログラムを確かめます。</p>
+
+<pre><code>python checkpoints/01/check_leap.py</code></pre>
+
+<p>実行すると、1900年と2100年で <code>NG</code> と表示されます。これは、配ったプログラムに
+わざと不完全な部分を残してあるためです。</p>
+
+<div class="step">
+<div class="step-title">閏年の正しい決まり</div>
+<ul>
+  <li>西暦が4で割り切れる年は閏年。</li>
+  <li>ただし、100で割り切れる年は閏年ではない。</li>
+  <li>ただし、400で割り切れる年は、やはり閏年。</li>
+</ul>
+<p>配ったプログラム（<code>checkpoints/01/leap.py</code>）は、1つめの決まりしか見ていません。</p>
+</div>
+
+<h2>3. 直す</h2>
+
+<ol>
+  <li>左側のファイル一覧から <code>checkpoints/01/leap.py</code> を開く。</li>
+  <li><code>is_leap_year</code> 関数を、上の3つの決まりをすべて満たすように直す。</li>
+  <li>保存する（<kbd>Cmd</kbd>+<kbd>S</kbd> または <kbd>Ctrl</kbd>+<kbd>S</kbd>）。</li>
+  <li>ターミナルでもう一度確かめる。
+    <pre><code>python checkpoints/01/check_leap.py</code></pre>
+  </li>
+  <li>6件すべて <code>OK</code> になれば直せています。</li>
+</ol>
+
+<div class="warn">
+生成AIに直してもらってもかまいません。ただし、<strong>自分で動かして確かめ、
+なぜ直ったのかを自分の言葉で説明できる</strong>ようにしてください。これは今日から
+学期の最後まで続く、この講義全体の考え方です。
+</div>
+
+<h2>4. commit と push で提出する</h2>
+
+<p>ターミナルで、次の4つを順番に入力します。</p>
+
+<pre><code>git status
+git add -A
+git commit -m "閏年の判定を直す"
+git push</code></pre>
+
+<ul>
+  <li><code>git status</code>：変更したファイルの一覧を見る。<code>checkpoints/01/leap.py</code> が
+    「modified」と表示されるはずです。</li>
+  <li><code>git add -A</code>：変更を、次の commit に含めるものとして登録する。</li>
+  <li><code>git commit -m "…"</code>：登録した変更を、説明を付けて記録する。</li>
+  <li><code>git push</code>：記録を GitHub の自分のリポジトリに送る。</li>
+</ul>
+
+<p>初めて commit するとき、名前やメールアドレスの設定を求められることがあります。表示される
+指示に従ってください。名前には本名ではなく GitHub のユーザー名を使ってください。</p>
+
+<h2>5. 確認（Actions）を見る</h2>
+
+<ol>
+  <li>Vivaldi で自分のリポジトリ（<code>github.com/&lt;自分のユーザー名&gt;/pp2026</code>）を開く。</li>
+  <li>上のタブから <strong>Actions</strong> を選ぶ。</li>
+  <li>一番上の実行結果の印が、オレンジ（実行中）→ 緑（成功）に変わるのを確認する。</li>
+</ol>
+
+<p>赤い印のままだったら、<code>check_leap.py</code> をもう一度ターミナルで実行して確かめてください。</p>
+
+<h2>6. TACT で提出する</h2>
+
+<p>TACT の提出欄に、次の2つを入力してください。</p>
+
+<ul>
+  <li>GitHub のユーザー名</li>
+  <li>自分のリポジトリの URL（<code>https://github.com/&lt;自分のユーザー名&gt;/pp2026</code>）</li>
+</ul>
+
+<h2>7. Codespaces を止める</h2>
+
+<p>無料枠を節約するため、使い終わったら Codespaces を止めます。
+<a href="https://github.com/codespaces" target="_blank" rel="noopener">github.com/codespaces</a>
+を開き、自分の Codespace の「…」メニューから <strong>Stop codespace</strong> を押してください。</p>
+
+<p>これで今日の作業は完了です。お疲れさまでした。</p>
+
+</body>
+</html>
