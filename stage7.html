@@ -12,36 +12,23 @@
 
 <h1>エクストラ：早く終わったグループへ</h1>
 
-<p>段階6まで終わったグループ向けのおまけです。どれから始めても、全部やらなくてもかまいません。
-グループの仲間がまだ作業中なら、まずそちらを手伝ってください。</p>
+<p>段階6まで終わったグループ向けのおまけです。下の 6 つから、やってみたいものを選んでください。
+1 つだけでも、いくつやってもかまいません。グループの仲間がまだ作業中なら、まずそちらを手伝ってください。</p>
 
-<h2>E1. 4つの生成AIに同じ質問をして、答えを比べる</h2>
+<div class="menu" id="menu">
+  <a href="#avatar"><span class="menu-title">A. いろいろな作風のアバター</span><span class="menu-desc">ChatGPT でアニメ風・3D 風などのアイコンを作る</span><span class="menu-time">20 分</span></a>
+  <a href="#profile"><span class="menu-title">B. GitHub のプロフィールページ</span><span class="menu-desc">自己紹介の README を作って、プロフィールに表示する</span><span class="menu-time">20 分</span></a>
+  <a href="#custom"><span class="menu-title">C. 自分専用の学習アシスタント</span><span class="menu-desc">生成AIに「教え方」を覚えさせておく</span><span class="menu-time">10 分</span></a>
+  <a href="#gmail"><span class="menu-title">D. スマートフォンで講義用の Gmail</span><span class="menu-desc">GitHub などからのメールに気づけるようにする</span><span class="menu-time">5 分</span></a>
+  <a href="#codespaces"><span class="menu-title">E. Codespaces の見た目を変える</span><span class="menu-desc">配色や文字の大きさを自分好みにする</span><span class="menu-time">10 分</span></a>
+  <a href="#twofactor"><span class="menu-title">F. GitHub の 2 要素認証</span><span class="menu-desc">パスワードが漏れてもログインされないようにする</span><span class="menu-time">10 分</span></a>
+</div>
 
-<p>段階3で登録した ChatGPT・Gemini・Claude・Perplexity に、まったく同じ質問を送ってみましょう。
-同じ質問でも、答え方はかなり違います。</p>
-
-<pre><code>2100年は閏年ですか？理由も、中学生にわかるように説明してください。</code></pre>
-
-<p>答えが返ってきたら、次の点を比べてください。グループで手分けして、4 つの画面を並べて見るのが
-おすすめです。</p>
-
-<table class="judge">
-  <tr><th>比べる点</th><th>見るところ</th></tr>
-  <tr><td>正しさ</td><td>段階6の流れ図と同じ結論か（2100年は閏年でない）</td></tr>
-  <tr><td>説明のしかた</td><td>どれが一番わかりやすいか。長すぎないか</td></tr>
-  <tr><td>出典</td><td>どこに書いてあったかを示しているか（Perplexity は出典のリンクが付く）</td></tr>
-  <tr><td>速さ</td><td>答えが出るまでにかかった時間</td></tr>
-</table>
-
-<p>Perplexity の出典のリンクは、1 つ開いて、本当にそのページにそう書いてあるかを確かめてください。
-生成AIの答えを、元の情報と照らし合わせて確かめる練習です。</p>
-
-<p>余裕があれば、自分で考えた質問でも比べてみましょう（本物の個人情報は入れないこと）。</p>
-
-<h2>E2. ChatGPT で、いろいろな作風のアバターを作る</h2>
+<h2 id="avatar">A. ChatGPT で、いろいろな作風のアバターを作る</h2>
 
 <p>段階4では CHARAT でアバターを作りました。ここでは ChatGPT の画像生成で、作風を変えたアバターを
-作ってみます。気に入ったものができたら、GitHub や Gravatar のアイコンを差し替えてもかまいません。</p>
+作ってみます。気に入ったものができたら、GitHub や Gravatar のアイコンを差し替えてもかまいません
+（差し替え方は段階4と同じです）。</p>
 
 <div class="warn">
 <strong>顔写真はアップロードしません。</strong>文章だけで作ります。友人や有名人、既存のキャラクターに
@@ -99,14 +86,110 @@
   <li>アイコンは小さく表示されるので、「顔を大きく」「背景はシンプルに」と頼むと見分けやすくなる。</li>
   <li>作品名や会社名（ジブリ、ピクサーなど）をプロンプトに入れると、断られることがある。上の例のように、
     線・色・質感などの特徴で伝えると通りやすい。</li>
-  <li>できた画像は、保存してから使う。GitHub と Gravatar での差し替え方は、段階4と同じ。</li>
 </ul>
 
 <p>作風を名前ではなく特徴で伝えるのは、他人の作品をそのまままねしないための工夫でもあります。
 生成AIで作った画像でも、既存の作品やキャラクターにそっくりなものを公開すると、権利の問題になることが
 あります。</p>
 
-<h2>E3. GitHub の 2 要素認証を設定する</h2>
+<p class="back"><a href="#menu">↑ メニューに戻る</a></p>
+
+<h2 id="profile">B. GitHub のプロフィールページを作る</h2>
+
+<p>自分のユーザー名と<strong>同じ名前</strong>のリポジトリを作り、そこに README（説明のファイル）を書くと、
+GitHub のプロフィールページの一番上に表示されます。名刺のようなもので、学期の終わりには
+最終課題へのリンクを載せることもできます。</p>
+
+<div class="warn">
+このリポジトリは<strong>Public（誰でも見られる）</strong>にしないとプロフィールに表示されません。
+本名・学籍番号・大学名・顔写真は書かないでください。好きなこと、この講義でやってみたいことなどを書きます。
+</div>
+
+<ol>
+  <li><a href="https://github.com/new" target="_blank" rel="noopener">github.com/new</a> を開く。</li>
+  <li><strong>Repository name</strong> に、自分の GitHub のユーザー名と同じ文字列（例：<code>symelon54</code>）を入れる。
+    「special repository」という案内が表示されれば正しい名前です。</li>
+  <li>公開範囲は <strong>Public</strong> のままにする。</li>
+  <li><strong>Add a README file</strong> にチェックを入れ、<strong>Create repository</strong> を押す。</li>
+  <li>作られた <code>README.md</code> の右上の鉛筆のボタン（Edit）を押し、自己紹介を書く。</li>
+  <li>右上の <strong>Commit changes...</strong> を押し、もう一度 <strong>Commit changes</strong> を押す。</li>
+  <li><code>github.com/&lt;自分のユーザー名&gt;</code> を開き、自己紹介が表示されていれば完成です。</li>
+</ol>
+
+<p>何を書けばよいか迷ったら、生成AIに下書きを頼み、自分の言葉に直しましょう。</p>
+
+<pre><code>GitHub のプロフィール用の README.md を、Markdown で書いてください。
+次の内容を入れて、短くまとめてください。本名や大学名は入れません。
+- 呼び名：symelon54
+- 好きなこと：（ここに書く）
+- この講義でやってみたいこと：（ここに書く）
+見出しと箇条書きを使い、全体で 10 行くらいにしてください。</code></pre>
+
+<p class="back"><a href="#menu">↑ メニューに戻る</a></p>
+
+<h2 id="custom">C. 自分専用の学習アシスタントを作る</h2>
+
+<p>生成AIには、毎回の会話の前提として読み込ませておく「指示」を登録できます。学習向けの指示を
+入れておくと、答えをいきなり全部教えるのではなく、自分で考える手助けをしてくれるようになります。</p>
+
+<div class="step">
+<div class="step-title">登録する場所（画面の表記は変わることがあります）</div>
+<ul>
+  <li><strong>ChatGPT</strong>：左下（または右上）の自分のアイコン → <strong>設定</strong> →
+    <strong>パーソナライズ</strong> → <strong>カスタム指示</strong></li>
+  <li><strong>Claude</strong>：左下の自分の名前 → <strong>設定</strong> → <strong>プロフィール</strong>の、
+    個人的な設定を書く欄</li>
+</ul>
+</div>
+
+<p>次の文を貼り付け、自分に合うように書き換えてください。</p>
+
+<pre><code>私はプログラミングを学んでいる大学2年生です。Python と Java の基礎は学びました。
+- プログラムの質問には、すぐに完成したコードを出さず、まずヒントや考え方を示してください。
+- 私が「答えを見せて」と頼んだときだけ、完成したコードを示してください。
+- 専門用語を使うときは、短い説明を添えてください。
+- コードを示すときは、どう動かして確かめればよいかも書いてください。</code></pre>
+
+<p>登録したら、「Python で、リストの中で一番大きい数を見つけるには？」と聞いてみましょう。
+ヒントから教えてくれれば成功です。この指示は、いつでも書き換えたり消したりできます。</p>
+
+<p class="back"><a href="#menu">↑ メニューに戻る</a></p>
+
+<h2 id="gmail">D. スマートフォンで講義用の Gmail を見られるようにする</h2>
+
+<p>GitHub の確認（Actions）が失敗したときのお知らせや、各サービスからの大事な連絡は、講義用の Gmail に
+届きます。スマートフォンの Gmail アプリに講義用のアカウントを追加しておくと、届いたことに気づけます。</p>
+
+<ol>
+  <li>スマートフォンに Gmail アプリを入れる（Android にはたいてい最初から入っています。iPhone は App Store から入れる）。</li>
+  <li>Gmail アプリの右上の自分のアイコンを押し、<strong>別のアカウントを追加</strong> → <strong>Google</strong> を選ぶ。</li>
+  <li>講義用の Gmail アドレス（例：<code>symelon54@gmail.com</code>）とパスワードでログインする。</li>
+  <li>アプリの通知がオンになっているかを確かめる。</li>
+</ol>
+
+<p>アイコンを押すと、私用のアカウントと講義用のアカウントを切り替えられます。メールを送るときは、
+どちらのアカウントから送るのかに気をつけてください。</p>
+
+<p class="back"><a href="#menu">↑ メニューに戻る</a></p>
+
+<h2 id="codespaces">E. Codespaces の見た目を自分好みにする</h2>
+
+<p>Codespaces はこれから毎回使う画面です。配色（テーマ）や文字の大きさを、見やすいように変えておきましょう。</p>
+
+<ol>
+  <li>Codespaces を開き、左下の歯車のボタン（Manage）を押す。</li>
+  <li><strong>Themes</strong> → <strong>Color Theme</strong> を選ぶ。</li>
+  <li>上下の矢印キーでテーマを切り替えると、画面がその場で変わる。気に入ったものの上で Enter を押す。</li>
+  <li>文字の大きさは、同じ歯車のボタン → <strong>Settings</strong> を開き、上の検索欄に <code>font size</code>
+    と入れて、<strong>Editor: Font Size</strong> の数字を変える。</li>
+</ol>
+
+<p>歯車のボタンの <strong>Backup and Sync Settings...</strong>（設定の同期）を GitHub アカウントでオンにすると、
+次に新しい Codespace を作ったときも同じ見た目になります。</p>
+
+<p class="back"><a href="#menu">↑ メニューに戻る</a></p>
+
+<h2 id="twofactor">F. GitHub の 2 要素認証を設定する</h2>
 
 <p>パスワードが漏れても、他人がログインできないようにする設定です。GitHub では、多くの利用者に設定が求められています。</p>
 
@@ -119,6 +202,8 @@
   <li>最後に表示される<strong>リカバリーコード</strong>（復旧用のコード）は、必ずダウンロードして保存する。
     スマートフォンをなくしたときに、これがないとログインできなくなります。</li>
 </ol>
+
+<p class="back"><a href="#menu">↑ メニューに戻る</a></p>
 
 <script src="ui.js"></script>
 </body>

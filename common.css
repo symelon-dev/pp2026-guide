@@ -164,6 +164,41 @@ a.next {
 }
 a.next:hover { filter: brightness(1.15); }
 
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.7rem;
+  margin: 1.2rem 0 2rem;
+}
+.menu a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--box-border);
+  border-radius: 10px;
+  background: var(--box-bg);
+  color: var(--fg);
+  text-decoration: none;
+  transition: transform 0.15s, border-color 0.15s;
+}
+.menu a:hover { transform: translateY(-3px); border-color: var(--accent); }
+.menu-title { font-weight: bold; color: var(--accent); }
+.menu-desc { font-size: 0.88rem; line-height: 1.5; }
+.menu-time { font-size: 0.8rem; color: #777; margin-top: auto; }
+.menu-time::before { content: "目安 "; }
+p.back { text-align: right; font-size: 0.9rem; }
+
+.format {
+  border: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  background: #f7fbf9;
+}
+.format-title { font-weight: bold; color: var(--accent); font-size: 1.05rem; }
+table.judge td.ok { color: var(--accent); font-weight: bold; }
+
 ol.progress {
   list-style: none;
   display: flex;

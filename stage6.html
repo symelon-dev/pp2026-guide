@@ -179,14 +179,34 @@ git push</code></pre>
 ターミナルで見たのと同じ表が出ているので、どの年が NG かが分かります。直して、もう一度 5 の手順で
 push してください。</p>
 
-<h2>7. TACT で提出する</h2>
+<h2>7. TACT で提出する（必ずこの形式で！）</h2>
 
-<p>TACT の提出欄に、次の2つを入力してください。</p>
+<p>自分のリポジトリの URL を TACT に提出します。提出された URL は、プログラムでまとめて読み取ります。
+<strong>形式が違うと読み取れず、提出していないことになります。</strong>手で打たず、コピーして貼り付けてください。</p>
 
-<ul>
-  <li>GitHub のユーザー名</li>
-  <li>自分のリポジトリの URL（<code>https://github.com/&lt;自分のユーザー名&gt;/pp2026</code>）</li>
-</ul>
+<ol>
+  <li>Vivaldi で自分のリポジトリ（<code>pp2026</code>）のトップページを開く。</li>
+  <li>アドレス欄の URL をすべて選んでコピーする。</li>
+  <li>TACT の課題「第1回：リポジトリの URL の提出」を開き、提出欄に貼り付けて提出する。</li>
+</ol>
+
+<div class="format">
+<div class="format-title">提出する形式（これ 1 行だけ）</div>
+<pre><code>https://github.com/symelon54/pp2026</code></pre>
+<p><code>symelon54</code> の部分が、自分の GitHub のユーザー名になります。</p>
+</div>
+
+<table class="judge">
+  <tr><th>提出した内容</th><th>判定</th></tr>
+  <tr><td><code>https://github.com/symelon54/pp2026</code></td><td class="ok">✓ 正しい</td></tr>
+  <tr class="bad"><td><code>symelon54</code>（ユーザー名だけ）</td><td class="no">✗ URL にする</td></tr>
+  <tr class="bad"><td><code>https://github.com/symelon54</code>（<code>/pp2026</code> がない）</td><td class="no">✗ リポジトリのページを開いてコピーする</td></tr>
+  <tr class="bad"><td><code>https://github.com/symelon54/pp2026</code> です。よろしくお願いします。</td><td class="no">✗ URL のほかに何も書かない</td></tr>
+  <tr class="bad"><td><code>https://github.com/symelon54/pp2026/tree/main/checkpoints</code></td><td class="no">✗ リポジトリのトップページの URL にする</td></tr>
+  <tr class="bad"><td><code>https://github.com/symelon-dev/pp2026-template</code></td><td class="no">✗ テンプレートではなく、自分のリポジトリ</td></tr>
+</table>
+
+<p>名前・学籍番号・あいさつは書きません（TACT がだれの提出かを記録しています）。</p>
 
 <h2>8. Codespaces を止める</h2>
 
@@ -201,7 +221,7 @@ push してください。</p>
 <ul class="check" data-key="stage6">
   <li><code>check_leap.py</code> が 6 件すべて OK になった</li>
   <li>push して、Actions の印が緑の ✓ になった</li>
-  <li>TACT に GitHub のユーザー名とリポジトリの URL を提出した</li>
+  <li>TACT に、自分のリポジトリの URL を決められた形式（1 行だけ）で提出した</li>
   <li>Codespaces を止めた</li>
 </ul>
 
