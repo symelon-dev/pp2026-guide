@@ -24,7 +24,7 @@ function setupGate(expectedHashHex, nextUrl) {
       if (typeof celebrate === "function") celebrate();
       setTimeout(() => { window.location.href = nextUrl; }, 1600);
     } else {
-      message.textContent = "合言葉が違います。教員に確認してください。";
+      message.textContent = "合言葉が違います。もう一度確かめてください。";
       message.className = "ng";
       input.value = "";
       input.focus();
