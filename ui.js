@@ -1,11 +1,11 @@
 // 手順書の見た目の部品：段階の進み具合、チェックリスト、合格時の紙吹雪。
 const STAGES = [
-  { title: "ブラウザと Google", icon: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/>' },
-  { title: "GitHub", icon: '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/>' },
-  { title: "生成AI", icon: '<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/>' },
-  { title: "アバター", icon: '<circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/>' },
-  { title: "リポジトリ", icon: '<path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>' },
-  { title: "プログラム", icon: '<path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/>' },
+  { title: "ブラウザと Google", minutes: 15, icon: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/>' },
+  { title: "GitHub", minutes: 10, icon: '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/>' },
+  { title: "生成AI", minutes: 30, icon: '<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/>' },
+  { title: "アバター", minutes: 20, icon: '<circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/>' },
+  { title: "リポジトリ", minutes: 20, icon: '<path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>' },
+  { title: "プログラム", minutes: 30, icon: '<path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/>' },
 ];
 
 function svg(inner) {
@@ -21,11 +21,20 @@ function renderProgress() {
     const state = n < current ? "done" : n === current ? "now" : "todo";
     const li = document.createElement("li");
     li.className = state;
-    li.innerHTML = `<span class="dot">${state === "done" ? svg('<path d="M5 12l5 5 9-10"/>') : svg(s.icon)}</span><span class="label">${n}. ${s.title}</span>`;
+    li.innerHTML = `<a href="stage${n}.html" title="段階${n}へ"><span class="dot">${state === "done" ? svg('<path d="M5 12l5 5 9-10"/>') : svg(s.icon)}</span><span class="label">${n}. ${s.title}</span><span class="mins">${s.minutes} 分</span></a>`;
     nav.appendChild(li);
   });
   const anchor = document.querySelector(".stage-nav");
   anchor ? anchor.after(nav) : document.body.prepend(nav);
+
+  const stage = STAGES[current - 1];
+  const h1 = document.querySelector("h1");
+  if (stage && h1) {
+    const goal = document.createElement("p");
+    goal.className = "goal-time";
+    goal.innerHTML = `${svg('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>')}<span>目標時間：<strong>${stage.minutes} 分</strong>（グループ全員が終わるまで）</span>`;
+    h1.after(goal);
+  }
 }
 
 function setupChecklists() {
