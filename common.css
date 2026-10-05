@@ -70,6 +70,21 @@ pre {
 }
 
 pre code { background: none; padding: 0; }
+.step pre { white-space: pre-wrap; }
+pre { position: relative; }
+pre:has(.copy) { padding-top: 2.2rem; }
+pre .copy {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  background: #444;
+  border: 1px solid #666;
+  border-radius: 4px;
+  color: #eee;
+}
+pre .copy.done { background: var(--accent); }
 
 a { color: var(--accent); }
 
@@ -109,6 +124,7 @@ table.judge th, table.judge td {
   text-align: center;
 }
 table.judge th { background: var(--box-bg); }
+table.judge td:last-child { text-align: left; }
 table.judge tr.bad td { background: #fde8e8; }
 table.judge td.no { color: #b4262b; font-weight: bold; }
 

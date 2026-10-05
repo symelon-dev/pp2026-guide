@@ -83,6 +83,24 @@ function setupNextLinks() {
   });
 }
 
+function setupCopyButtons() {
+  document.querySelectorAll("pre > code").forEach((code) => {
+    if (code.querySelector("span")) return;
+    const btn = document.createElement("button");
+    btn.className = "copy";
+    btn.type = "button";
+    btn.textContent = "コピー";
+    btn.addEventListener("click", async () => {
+      await navigator.clipboard.writeText(code.textContent);
+      btn.textContent = "コピーしました";
+      btn.classList.add("done");
+      setTimeout(() => { btn.textContent = "コピー"; btn.classList.remove("done"); }, 1500);
+    });
+    code.parentElement.appendChild(btn);
+  });
+}
+
 renderProgress();
 setupChecklists();
 setupNextLinks();
+setupCopyButtons();
