@@ -73,5 +73,16 @@ function celebrate() {
   }
 }
 
+function setupNextLinks() {
+  document.querySelectorAll("a.next").forEach((a) => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      celebrate();
+      setTimeout(() => { window.location.href = a.href; }, 1400);
+    });
+  });
+}
+
 renderProgress();
 setupChecklists();
+setupNextLinks();

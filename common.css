@@ -91,14 +91,6 @@ button:disabled { opacity: 0.5; cursor: default; }
   padding-top: 1.5rem;
 }
 
-.gate input[type="text"] {
-  font-size: 1rem;
-  padding: 0.5rem 0.7rem;
-  border: 1px solid var(--box-border);
-  border-radius: 6px;
-  width: 10rem;
-}
-
 pre .t-ok { color: #4ec96b; }
 pre .t-ng { color: #ff6b6b; font-weight: bold; }
 pre .t-dim { color: #888; }
@@ -143,6 +135,18 @@ table.judge td.no { color: #b4262b; font-weight: bold; }
 .flow .not-leap { background: #eee; color: #444; }
 .flow .missing { outline: 3px dashed #b4262b; outline-offset: 4px; border-radius: 8px; }
 .flow .missing-note { color: #b4262b; font-weight: bold; font-size: 0.9rem; }
+
+a.next {
+  display: inline-block;
+  font-size: 1.05rem;
+  font-weight: bold;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+}
+a.next:hover { filter: brightness(1.15); }
 
 ol.progress {
   list-style: none;
@@ -221,6 +225,3 @@ ul.check.all-done + .check-done { display: block; }
   to { transform: translate(var(--drift), 105vh) rotate(var(--spin)); opacity: 0.6; }
 }
 
-#gate-message { margin-top: 0.6rem; font-weight: bold; }
-#gate-message.ok { color: var(--accent); }
-#gate-message.ng { color: #b4262b; }
