@@ -16,7 +16,7 @@
 1 つだけでも、いくつやってもかまいません。グループの仲間がまだ作業中なら、まずそちらを手伝ってください。</p>
 
 <div class="menu" id="menu">
-  <a href="#avatar"><span class="menu-title">A. いろいろな作風のアバター</span><span class="menu-desc">ChatGPT でアニメ風・3D 風などのアイコンを作る</span><span class="menu-time">20 分</span></a>
+  <a href="#avatar"><span class="menu-title">A. いろいろな作風のアバター</span><span class="menu-desc">自分の写真をもとに、アニメ風・3D 風などのアイコンを作る</span><span class="menu-time">20 分</span></a>
   <a href="#profile"><span class="menu-title">B. GitHub のプロフィールページ</span><span class="menu-desc">自己紹介の README を作って、プロフィールに表示する</span><span class="menu-time">20 分</span></a>
   <a href="#custom"><span class="menu-title">C. 自分専用の学習アシスタント</span><span class="menu-desc">生成AIに「教え方」を覚えさせておく</span><span class="menu-time">10 分</span></a>
   <a href="#gmail"><span class="menu-title">D. スマートフォンで講義用の Gmail</span><span class="menu-desc">GitHub などからのメールに気づけるようにする</span><span class="menu-time">5 分</span></a>
@@ -30,14 +30,26 @@
 作ってみます。気に入ったものができたら、GitHub や Gravatar のアイコンを差し替えてもかまいません
 （差し替え方は段階4と同じです）。</p>
 
+<p>自分の顔写真をもとにすると、自分に似たアバターができて面白くなります。写真を使わず、文章だけで作ることもできます。</p>
+
 <div class="warn">
-<strong>顔写真はアップロードしません。</strong>文章だけで作ります。友人や有名人、既存のキャラクターに
-似せることもしません。無料で作れる枚数には 1 日の上限があるので、グループで作風を分担すると
-たくさん見比べられます。
+写真をアップロードする前に、段階3の「5. 入力したものを学習に使わせない設定にする」で、ChatGPT の
+「すべての人のためにモデルを改善する」が<strong>オフ</strong>になっていることを確かめてください。
+使う写真は<strong>自分だけが写ったもの</strong>にします。友人など他人が写った写真、名札・学生証・住所など
+個人情報が写り込んだ写真は使いません。
 </div>
 
-<p>下のプロンプトの<code>【人物】</code>の部分を、自分の好きな設定に書き換えて使います。たとえば
-「青いパーカーを着た、発明好きの大学生」「黄色い帽子をかぶった、のんびりした猫」などです。</p>
+<p>下のプロンプトの<code>【人物】</code>の部分を書き換えて使います。</p>
+
+<ul>
+  <li>写真を使うとき：写真を添付し、<code>【人物】</code>を「添付した写真の人物。顔の特徴と髪型を残す」にする。
+    正面から撮った、明るい写真がうまくいきます。</li>
+  <li>文章だけで作るとき：<code>【人物】</code>を「青いパーカーを着た、発明好きの大学生」
+    「黄色い帽子をかぶった、のんびりした猫」のように、好きな設定にする。</li>
+</ul>
+
+<p>無料で作れる枚数には 1 日の上限があるので、グループで作風を分担すると、たくさん見比べられます。
+友人や有名人、既存のキャラクターに似せることはしません。</p>
 
 <div class="step">
 <div class="step-title">ビックリマンシール系</div>

@@ -67,7 +67,43 @@ Claude はとばしてかまいません。
   <li>有料プラン（Pro）の案内が出ても、申し込まずに閉じる。</li>
 </ol>
 
-<h2>5. 拡張機能「Chat AI Ctrl+Enter Sender」を入れる</h2>
+<h2>5. 入力したものを学習に使わせない設定にする</h2>
+
+<p>生成AIの会社は、何も設定しないと、送った文章や画像を AI の学習（性能の改善）に使うことがあります。
+4 つとも、設定で止められます。エクストラで自分の顔写真を使うこともあるので、ここで全部オフにしておきましょう
+（画面の表記は変わることがあります）。</p>
+
+<div class="step">
+<div class="step-title">ChatGPT</div>
+<p>左下の自分の名前 → <strong>設定</strong> → <strong>データコントロール</strong> →
+「<strong>すべての人のためにモデルを改善する</strong>」をオフにする。</p>
+</div>
+
+<div class="step">
+<div class="step-title">Gemini</div>
+<p>左のメニュー → <strong>設定とヘルプ</strong> → <strong>アクティビティ</strong>（Gemini アプリ アクティビティ）→
+<strong>オフにする</strong>。オフにすると、会話の履歴は残らなくなります（72 時間で消えます）。</p>
+</div>
+
+<div class="step">
+<div class="step-title">Claude</div>
+<p>左下の自分の名前 → <strong>設定</strong> → <strong>プライバシー</strong> →
+「<strong>Claude の改善に協力する</strong>」（Help improve Claude）をオフにする。</p>
+</div>
+
+<div class="step">
+<div class="step-title">Perplexity</div>
+<p>左下の自分のアイコン → <strong>設定</strong>（Settings）→ <strong>Preferences</strong> →
+「<strong>AI data retention</strong>」をオフにする。</p>
+</div>
+
+<div class="warn">
+オフにしても、送ったものはしばらく会社のサーバーに保存されます（安全の確認のため。ChatGPT と Claude は
+約 30 日）。また、回答に高評価・低評価のボタンで評価を送ると、その会話は学習に使われることがあります。
+学習オフは「何を入れても安全」という意味ではありません。パスワードや他人の個人情報は、これからも入れないでください。
+</div>
+
+<h2>6. 拡張機能「Chat AI Ctrl+Enter Sender」を入れる</h2>
 
 <p>生成AIの入力欄では、ふつう Enter キーを押すとすぐに送信されてしまい、改行して長い文章を
 書くのが大変です。この拡張機能を入れると、<strong>Enter で改行</strong>、
@@ -90,7 +126,7 @@ ChatGPT・Gemini・Claude・Perplexity のどれでも使えます。</p>
 ページを開いてください。</p>
 </div>
 
-<h2>6. 拡張機能「まもるくん」を入れる</h2>
+<h2>7. 拡張機能「まもるくん」を入れる</h2>
 
 <p>生成AIに送った文章は、サービスの会社のサーバーに送られます。名前や電話番号などの個人情報を、
 うっかり送ってしまわないようにするための拡張機能です。送信の前に入力欄の文章を調べ、
@@ -101,7 +137,7 @@ ChatGPT・Gemini・Claude・Perplexity のどれでも使えます。</p>
   <li>Vivaldi で
     <a href="https://chromewebstore.google.com/detail/%E3%81%BE%E3%82%82%E3%82%8B%E3%81%8F%E3%82%93-%E2%80%94-ai%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%82%AC%E3%83%BC%E3%83%89/pfhaefhabcmapdbloogaffddjfahaono" target="_blank" rel="noopener">Chrome ウェブストアのまもるくんのページ</a>
     を開く。名前が「まもるくん — AIチャット個人情報ガード」になっていることを確かめる。</li>
-  <li>5 と同じように <strong>Chrome に追加</strong>（Opera は <strong>Opera に追加</strong>）を押す。</li>
+  <li>6 と同じように <strong>Chrome に追加</strong>（Opera は <strong>Opera に追加</strong>）を押す。</li>
 </ol>
 
 <div class="warn">
@@ -110,7 +146,7 @@ ChatGPT・Gemini・Claude・Perplexity のどれでも使えます。</p>
 注意をうながす道具です。見落としもありえます。最後に送るかどうかを決めるのは自分です。
 </div>
 
-<h2>7. 使ってみる</h2>
+<h2>8. 使ってみる</h2>
 
 <p>ChatGPT か Gemini を開き、まず普通に質問してみましょう。改行は Enter、送信は
 <kbd>Ctrl</kbd>+<kbd>Enter</kbd>（Mac は <kbd>Cmd</kbd>+<kbd>Enter</kbd>）です。</p>
@@ -136,6 +172,7 @@ ChatGPT・Gemini・Claude・Perplexity のどれでも使えます。</p>
 
 <ul class="check" data-key="stage3">
   <li>ChatGPT・Gemini・Perplexity（18 歳以上の人は Claude も）に、講義用のアカウントでログインできている。</li>
+  <li>4 つのサービスとも、学習に使う設定をオフにした。</li>
   <li>Enter で改行でき、<kbd>Ctrl</kbd>+<kbd>Enter</kbd>（<kbd>Cmd</kbd>+<kbd>Enter</kbd>）で送信できる。</li>
   <li>架空の個人情報を送ろうとしたときに、まもるくんが何をしたか（または何もしなかったか）を説明できる。</li>
 </ul>
