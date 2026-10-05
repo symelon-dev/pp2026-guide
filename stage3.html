@@ -12,7 +12,7 @@
 
 <h1>段階3：生成AIのアカウントを作り、拡張機能を入れる</h1>
 
-<p>この講義で使う生成AI（ChatGPT・Gemini・Claude）に登録し、使いやすくするための拡張機能と、
+<p>この講義で使う生成AI（ChatGPT・Gemini・Claude・Perplexity）に登録し、使いやすくするための拡張機能と、
 個人情報をうっかり送らないための拡張機能を入れます。最後に、実際に使ってみます。</p>
 
 <div class="warn">
@@ -55,12 +55,24 @@ ChatGPT と Gemini だけで進めてください。電話番号の確認がど�
 Claude はとばしてかまいません。
 </div>
 
-<h2>4. 拡張機能「Chat AI Ctrl+Enter Sender」を入れる</h2>
+<h2>4. Perplexity に登録する</h2>
+
+<p>Perplexity は、Web を検索して、答えと一緒に情報源（どのページに書いてあったか）を示してくれる
+生成AIです。調べものの裏付けを取るときに使います。</p>
+
+<ol>
+  <li>Vivaldi で <a href="https://www.perplexity.ai/" target="_blank" rel="noopener">perplexity.ai</a> を開く。</li>
+  <li><strong>サインアップ</strong>（Sign Up）を押し、<strong>Google で続ける</strong> を選ぶ。</li>
+  <li>講義用の Google アカウントを選び、画面の指示に従って進める。</li>
+  <li>有料プラン（Pro）の案内が出ても、申し込まずに閉じる。</li>
+</ol>
+
+<h2>5. 拡張機能「Chat AI Ctrl+Enter Sender」を入れる</h2>
 
 <p>生成AIの入力欄では、ふつう Enter キーを押すとすぐに送信されてしまい、改行して長い文章を
 書くのが大変です。この拡張機能を入れると、<strong>Enter で改行</strong>、
 <kbd>Ctrl</kbd>+<kbd>Enter</kbd>（Mac は <kbd>Cmd</kbd>+<kbd>Enter</kbd>）で送信になります。
-ChatGPT・Gemini・Claude のどれでも使えます。</p>
+ChatGPT・Gemini・Claude・Perplexity のどれでも使えます。</p>
 
 <ol>
   <li>Vivaldi で
@@ -78,7 +90,7 @@ ChatGPT・Gemini・Claude のどれでも使えます。</p>
 ページを開いてください。</p>
 </div>
 
-<h2>5. 拡張機能「まもるくん」を入れる</h2>
+<h2>6. 拡張機能「まもるくん」を入れる</h2>
 
 <p>生成AIに送った文章は、サービスの会社のサーバーに送られます。名前や電話番号などの個人情報を、
 うっかり送ってしまわないようにするための拡張機能です。送信の前に入力欄の文章を調べ、
@@ -89,16 +101,16 @@ ChatGPT・Gemini・Claude のどれでも使えます。</p>
   <li>Vivaldi で
     <a href="https://chromewebstore.google.com/detail/%E3%81%BE%E3%82%82%E3%82%8B%E3%81%8F%E3%82%93-%E2%80%94-ai%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%82%AC%E3%83%BC%E3%83%89/pfhaefhabcmapdbloogaffddjfahaono" target="_blank" rel="noopener">Chrome ウェブストアのまもるくんのページ</a>
     を開く。名前が「まもるくん — AIチャット個人情報ガード」になっていることを確かめる。</li>
-  <li>4 と同じように <strong>Chrome に追加</strong>（Opera は <strong>Opera に追加</strong>）を押す。</li>
+  <li>5 と同じように <strong>Chrome に追加</strong>（Opera は <strong>Opera に追加</strong>）を押す。</li>
 </ol>
 
 <div class="warn">
 まもるくんが調べるのは <strong>ChatGPT と Gemini（と Microsoft Copilot）だけ</strong>です。
-<strong>Claude では働きません。</strong>また、送信を必ず止めてくれるわけではなく、
+<strong>Claude と Perplexity では働きません。</strong>また、送信を必ず止めてくれるわけではなく、
 注意をうながす道具です。見落としもありえます。最後に送るかどうかを決めるのは自分です。
 </div>
 
-<h2>6. 使ってみる</h2>
+<h2>7. 使ってみる</h2>
 
 <p>ChatGPT か Gemini を開き、まず普通に質問してみましょう。改行は Enter、送信は
 <kbd>Ctrl</kbd>+<kbd>Enter</kbd>（Mac は <kbd>Cmd</kbd>+<kbd>Enter</kbd>）です。</p>
@@ -123,7 +135,7 @@ ChatGPT・Gemini・Claude のどれでも使えます。</p>
 <p>終わったものにチェックを入れましょう。</p>
 
 <ul class="check" data-key="stage3">
-  <li>ChatGPT と Gemini（18 歳以上の人は Claude も）に、講義用のアカウントでログインできている。</li>
+  <li>ChatGPT・Gemini・Perplexity（18 歳以上の人は Claude も）に、講義用のアカウントでログインできている。</li>
   <li>Enter で改行でき、<kbd>Ctrl</kbd>+<kbd>Enter</kbd>（<kbd>Cmd</kbd>+<kbd>Enter</kbd>）で送信できる。</li>
   <li>架空の個人情報を送ろうとしたときに、まもるくんが何をしたか（または何もしなかったか）を説明できる。</li>
 </ul>
