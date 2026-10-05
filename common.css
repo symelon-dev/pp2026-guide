@@ -99,6 +99,51 @@ button:disabled { opacity: 0.5; cursor: default; }
   width: 10rem;
 }
 
+pre .t-ok { color: #4ec96b; }
+pre .t-ng { color: #ff6b6b; font-weight: bold; }
+pre .t-dim { color: #888; }
+pre .t-fix { background: #5a1d1d; outline: 2px solid #ff6b6b; display: inline-block; width: 100%; }
+pre .t-tag { color: #ffd166; font-weight: bold; }
+
+table.judge {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  width: 100%;
+  font-size: 0.95rem;
+}
+table.judge th, table.judge td {
+  border: 1px solid var(--box-border);
+  padding: 0.35rem 0.6rem;
+  text-align: center;
+}
+table.judge th { background: var(--box-bg); }
+table.judge tr.bad td { background: #fde8e8; }
+table.judge td.no { color: #b4262b; font-weight: bold; }
+
+.flow { margin: 1rem 0; }
+.flow .q {
+  background: var(--box-bg);
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  font-weight: bold;
+}
+.flow .branch {
+  margin: 0.3rem 0 0.3rem 1.6rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--box-border);
+}
+.flow .ans {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 0.1rem 0.6rem;
+  font-weight: bold;
+}
+.flow .yes-leap { background: #e3f4e8; color: var(--accent); }
+.flow .not-leap { background: #eee; color: #444; }
+.flow .missing { outline: 3px dashed #b4262b; outline-offset: 4px; border-radius: 8px; }
+.flow .missing-note { color: #b4262b; font-weight: bold; font-size: 0.9rem; }
+
 #gate-message { margin-top: 0.6rem; font-weight: bold; }
 #gate-message.ok { color: var(--accent); }
 #gate-message.ng { color: #b4262b; }
