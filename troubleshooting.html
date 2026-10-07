@@ -3,101 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>困ったときは</title>
-<link rel="stylesheet" href="common.css">
+<meta http-equiv="refresh" content="0; url=https://pp2026-guide.practical-programming.workers.dev/troubleshooting">
+<link rel="canonical" href="https://pp2026-guide.practical-programming.workers.dev/troubleshooting">
+<title>手順書は移転しました</title>
 </head>
 <body>
-
-<div class="stage-nav"><span></span><span><a href="index.html">トップに戻る</a></span></div>
-
-<h1>困ったときは</h1>
-
-<h2>まず、この順で解決を試す</h2>
-
-<ol>
-  <li><strong>画面のメッセージを読む。</strong>英語でも、知らない単語だけ調べれば意味が分かることが多いです。</li>
-  <li><strong>グループの仲間に画面を見せる。</strong>同じところでつまずいた人や、先に終わった人がいるはずです。
-    同じ手順を、仲間の画面と見比べてみてください。</li>
-  <li><strong>生成AIに聞く。</strong>何をしようとして、何が起きたかを伝えます。たとえば次のように聞きます。
-    <pre><code>GitHub Codespaces のターミナルで git push をしたら、次のメッセージが出ました。
-何が起きていて、どうすればよいですか。
-
-（ここに画面のメッセージを貼り付ける）</code></pre>
-    段階3より前でまだ登録していない人も、ChatGPT（chatgpt.com）はログインしなくても使えます。
-    仲間の画面の生成AIに聞いてもかまいません。</li>
-  <li><strong>それでも解決しなければ、後回しにして先に進む。</strong>あとの段階に関係しないもの
-    （2要素認証、Gravatar など）は、とばしてかまいません。段階5・6は、自宅で続けることもできます
-    （期限は10月12日（月）23:59）。</li>
-</ol>
-
-<div class="warn">
-生成AIにメッセージを貼り付けるときは、パスワードや電話番号、本名が含まれていないかを確かめてから
-送ってください。
-</div>
-
-<p>生成AIの答えが正しいとは限りません。言われたとおりにやってみて、本当に解決したかを自分の目で
-確かめてください。これも、この講義で身につけたい力の 1 つです。</p>
-
-<h2>Google アカウントの作成で、電話番号の確認が通らない</h2>
-<p>番号を半角で、先頭の 0 も含めて入力しているかを確かめてください。同じ番号で短い時間に何度も
-試すと、しばらく通らなくなることがあります。数分おいてから試してください。表示されたメッセージを
-生成AIに伝えて、ほかの確認の方法がないか聞くのも手です。</p>
-
-<h2>GitHub のユーザー名が、すでに他の人に使われている</h2>
-<p>段階1の果物の部分を別の果物に変えて、もう一度試してください。</p>
-
-<h2>Claude の電話番号の確認が通らない</h2>
-<p>その場で粘らずに、Claude の登録はとばして ChatGPT と Gemini で先に進んでください。
-18 歳未満の人も、Claude はとばします。</p>
-
-<h2>Opera で拡張機能が入れられない（「Chrome に追加」が押せない）</h2>
-<p>Opera のアドオンサイト（addons.opera.com）で「Install Chrome Extensions」を検索して入れてから、
-Chrome ウェブストアのページを開き直してください。ボタンが <strong>Opera に追加</strong> に変わります。</p>
-
-<h2>まもるくんを入れたのに、架空の個人情報がそのまま送信された</h2>
-<p>使っているのが Claude か Perplexity なら、まもるくんは働きません（対応していません）。ChatGPT か Gemini で
-試してください。それでも何も起きない場合は、拡張機能が有効になっているか（ブラウザの拡張機能の
-一覧でオンになっているか）を確かめてください。見落としもありうる道具なので、何も起きなかったことも
-1 つの結果として覚えておいてください。</p>
-
-<h2>Gravatar の確認メールが届かない</h2>
-<p>講義用の Gmail を開いているか（私用のアドレスを見ていないか）、迷惑メールのフォルダに入って
-いないかを確かめてください。数分待っても届かなければ、Gravatar は後回しにして、GitHub への
-アバターの登録を先に済ませてください。</p>
-
-<h2>「Use this template」のあと、Owner が自分のアカウントになっていない</h2>
-<p><strong>Owner</strong> の欄が <code>symelon-dev</code>（教員のアカウント）のままになっていないか
-確かめてください。自分のユーザー名に変えてから作成してください。</p>
-
-<h2>Codespaces がなかなか開かない・固まる</h2>
-<p>教室の回線が混み合っている可能性があります。1〜2分待ってから、タブを再読み込みしてください。
-それでも開かない場合は、段階5・6を自宅で続けてください（期限は10月12日（月）23:59）。
-<a href="https://github.com/codespaces" target="_blank" rel="noopener">github.com/codespaces</a>
-を開くと、作りかけの Codespace の続きから開けます。</p>
-
-<h2>commit のときに、名前やメールアドレスを聞かれる</h2>
-<p>ターミナルで次の 2 行を打ってから、もう一度 commit してください。<code>symelon54</code> の
-部分は、自分の GitHub のユーザー名と講義用の Gmail に変えます。本名は使いません。</p>
-<pre><code>git config --global user.name "symelon54"
-git config --global user.email "symelon54@gmail.com"</code></pre>
-
-<h2>左側の「ソース管理」に「変更の同期」というボタンがある</h2>
-<p>このボタンは、<code>git pull</code>（GitHub から取ってくる）と <code>git push</code>（GitHub に送る）を
-続けて行うものです。押しても問題はなく、「"origin/main" との間でコミットをプルおよびプッシュします」と
-確認が出たら <strong>OK</strong> を押せば push されます。ただ、この講義では git の動きを覚えるために、
-ターミナルで <code>git push</code> と打つやり方を使います。</p>
-
-<h2>push したのに、Actions の印が出ない</h2>
-<p>1分ほど待ってから、ブラウザでページを再読み込みしてください。</p>
-
-<h2>2要素認証のアプリを持っていない</h2>
-<p>スマートフォンがなくても、PC 用の認証アプリ（1Password や Authy など）で設定できます。
-今日は必須ではないので、わからなければ後回しにしてください。</p>
-
-<h2>ここに無いことで困ったとき</h2>
-<p>このページの最初の「まず、この順で解決を試す」に戻ってください。近くの席のグループに
-聞いてみるのもよい方法です。</p>
-
-<script src="ui.js"></script>
+<p>手順書は次の場所に移りました。自動で移らない場合は、リンクを開いてください。</p>
+<p><a href="https://pp2026-guide.practical-programming.workers.dev/troubleshooting">https://pp2026-guide.practical-programming.workers.dev/troubleshooting</a></p>
 </body>
 </html>
